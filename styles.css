@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+    font-family: Poppins;
+    color: black;
+    overflow: hidden;
+}
+
+main{
+    height: 100vh;
+    /* background: linear-gradient(to right top, #65dfc9, #6cdbeb); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    --s: 150px; /* control the size */
+    --c1: #f7d2a1;
+    --c2: #05057e;
+  
+    --_g: 
+       var(--c1) 0%  5% ,var(--c2) 6%  15%,var(--c1) 16% 25%,var(--c2) 26% 35%,var(--c1) 36% 45%,
+       var(--c2) 46% 55%,var(--c1) 56% 65%,var(--c2) 66% 75%,var(--c1) 76% 85%,var(--c2) 86% 95%,
+       #0000 96%;
+    background:
+      radial-gradient(50% 50% at 100% 0,var(--_g)),
+      radial-gradient(50% 50% at 0 100%,var(--_g)),
+      radial-gradient(50% 50%,var(--_g)),
+      radial-gradient(50% 50%,var(--_g)) calc(var(--s)/2) calc(var(--s)/2)
+      var(--c1);
+    background-size: var(--s) var(--s);
+}
+
+#title{
+    transition: text-shadow 0.3s ease;
+}
+
+#title:hover{
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+}
+
+.glass{
+    background: white;
+    /* height: 80vh; */
+    width: 85vw;
+    padding: 1rem;
+    max-width: 850px;
+    background: linear-gradient(
+        to right bottom, 
+        rgba(255,255,255,0.4), 
+        rgba(255,255,255,0.1) 
+    );
+    border-radius: 2rem;
+    backdrop-filter: blur(10px);
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-evenly;
+    align-items: center; */
+}
+
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.dropContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dropzone {
+    border: 0.5rem dashed white;
+    border-radius: 1rem;
+    width: 80%;
+    padding: 2rem;
+    text-align: center;
+    margin: 1rem;
+}
+
+.btn{
+    height: 1.5rem;
+    width: 8rem;
+    background: var(--c2);
+    color: white;
+    font-weight: 500;
+    border: none;
+    border-radius: 2rem;
+    transition: text-shadow 0.3s ease;
+}
+.btn:hover{
+    background: transparent;
+    color: var(--c2);
+    border: 0.1rem dashed ;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+}
+.input{
+    /* background: #6cdbeb; */
+    /* font-weight: 500; */
+    border: none;
+    border-radius: 1rem;
+}
+.highlight{
+    font-weight: 700;
+    cursor: pointer;
+}
